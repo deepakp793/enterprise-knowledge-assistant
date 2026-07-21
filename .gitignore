@@ -1,0 +1,35 @@
+# Environment variables and secrets
+.env
+
+# Python virtual environments
+.venv/
+venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking and linting
+.mypy_cache/
+.ruff_cache/
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+
+# Local vector database
+chroma_db/
