@@ -13,6 +13,7 @@ warn_unreachable = true
 show_error_codes = true
 files = ["src", "tests"]
 mypy_path = "src"
+plugins = ["pydantic.mypy"]
 
 [tool.pytest.ini_options]
 minversion = "9.1"

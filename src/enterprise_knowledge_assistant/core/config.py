@@ -6,6 +6,7 @@ class Settings(BaseSettings):
     confluence_base_url: AnyHttpUrl
     confluence_email: str
     confluence_api_token: SecretStr
+    confluence_space_key: str
 
     model_config = SettingsConfigDict(
         env_file=".env",

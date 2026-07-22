@@ -10,12 +10,14 @@ def test_settings_accepts_valid_values() -> None:
         confluence_base_url="https://example.atlassian.net/wiki",
         confluence_email="developer@example.com",
         confluence_api_token="test-token",
+        confluence_space_key="ENG",
         _env_file=None,
     )
 
     assert str(settings.confluence_base_url) == "https://example.atlassian.net/wiki"
     assert settings.confluence_email == "developer@example.com"
     assert settings.confluence_api_token.get_secret_value() == "test-token"
+    assert settings.confluence_space_key == "ENG"
     assert "test-token" not in repr(settings)
 
 
@@ -26,6 +28,7 @@ def test_settings_rejects_missing_required_values(
         "CONFLUENCE_BASE_URL",
         "CONFLUENCE_EMAIL",
         "CONFLUENCE_API_TOKEN",
+        "CONFLUENCE_SPACE_KEY",
     )
 
     for variable_name in environment_variables:
@@ -42,5 +45,6 @@ def test_settings_rejects_invalid_confluence_url() -> None:
             confluence_base_url="httpsexample.atlassian.net/wiki",
             confluence_email="developer@example.com",
             confluence_api_token="test-token",
+            confluence_space_key="ENG",
             _env_file=None,
         )
