@@ -3,3 +3,6 @@ uvicorn[standard]==0.51.0
 pydantic==2.13.4
 pydantic-settings==2.14.2
 httpx2==2.7.0
+beautifulsoup4==4.14.3
+langchain-core==1.4.9
+langchain-text-splitters==1.1.2
